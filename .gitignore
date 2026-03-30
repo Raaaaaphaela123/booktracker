@@ -1,0 +1,41 @@
+### JetBrains (IntelliJ) ###
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+/cmake-build-*/
+
+### Maven ###
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.utils_backup
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+# Nicht die mvnw Dateien ignorieren, falls du den Wrapper nutzt
+!.mvn/wrapper/maven-wrapper.jar
+
+### Java / Spring Boot ###
+*.class
+*.jar
+*.war
+*.ear
+*.db
+.metadata/
+bin/
+tmp/
+
+### Log Dateien ###
+*.log
+
+### OS Dateien ###
+.DS_Store
+Thumbs.db
+
+### SENSITIVE DATA (WICHTIG!) ###
+# Falls du Zugangsdaten in einer separaten Datei speicherst
+.env
+config/local.properties
