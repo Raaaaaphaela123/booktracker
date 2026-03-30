@@ -58,4 +58,10 @@ public class BookController {
     public Book updateBook(@PathVariable Long id, @RequestBody Book book) {
         return bookService.update(id, book);
     }
+
+    @DeleteMapping("/{id}")
+    public String deleteBook(@PathVariable Long id) {
+        bookService.deleteBook(id);
+        return "Erfolg: Buch mit ID " + id + " wurde aus der Datenbank gelöscht.";
+    }
 }

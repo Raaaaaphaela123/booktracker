@@ -31,5 +31,13 @@ Content-Type: application/json
   "rating": 5
 }
 
+### Ein Buch löschen (Delete)
+# Ersetze die 1 durch die ID des Buches, das verschwinden soll
+DELETE http://localhost:8080/api/books/2
+
 ###
+
+### Abschließender Check: Alle Bücher anzeigen
+# Hier kannst du prüfen, ob das Update übernommen oder das Löschen erfolgreich war
+GET http://localhost:8080/api/books
 

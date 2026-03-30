@@ -40,4 +40,12 @@ public class BookService {
                 })
                 .orElseThrow(() -> new RuntimeException("Buch nicht gefunden"));
     }
+
+    public void deleteBook(Long id) {
+        // Prüfen, ob das Buch überhaupt existiert, bevor wir löschen (guter Stil!)
+        if (!bookRepository.existsById(id)) {
+            throw new RuntimeException("Buch mit ID " + id + " nicht gefunden.");
+        }
+        bookRepository.deleteById(id);
+    }
 }
