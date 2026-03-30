@@ -19,3 +19,17 @@ Content-Type: application/json
   "status": "Geplant"
 }
 
+### Ein Buch aktualisieren (Update)
+# Ersetze die 1 durch eine existierende ID aus deiner Datenbank
+PUT http://localhost:8080/api/books/1
+Content-Type: application/json
+
+{
+  "title": "Der Alchemist - Special Edition",
+  "author": "Paulo Coelho",
+  "status": "Gelesen",
+  "rating": 5
+}
+
+###
+

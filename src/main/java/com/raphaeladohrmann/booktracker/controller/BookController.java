@@ -53,4 +53,9 @@ public class BookController {
         // Rückgabe einer Erfolgsmeldung an den Client
         return "Buch erfolgreich empfangen: " + book.getTitle();
     }
+
+    @PutMapping("/{id}")
+    public Book updateBook(@PathVariable Long id, @RequestBody Book book) {
+        return bookService.update(id, book);
+    }
 }

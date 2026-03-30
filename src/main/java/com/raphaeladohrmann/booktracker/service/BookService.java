@@ -27,4 +27,17 @@ public class BookService {
         // Speichert das Objekt dauerhaft in der Datenbank
         return bookRepository.save(book);
     }
+
+    public Book update(Long id, Book updatedBook) {
+        // Wir suchen das alte Buch, falls es existiert
+        return bookRepository.findById(id)
+                .map(book -> {
+                    book.setTitle(updatedBook.getTitle());
+                    book.setAuthor(updatedBook.getAuthor());
+                    book.setStatus(updatedBook.getStatus());
+                    book.setRating(updatedBook.getRating());
+                    return bookRepository.save(book); // Speichert die Änderungen
+                })
+                .orElseThrow(() -> new RuntimeException("Buch nicht gefunden"));
+    }
 }
