@@ -1,0 +1,21 @@
+### 1. Alle Bücher abrufen (GET)
+# Dies entspricht dem Aufruf im Browser.
+GET http://localhost:8080/api/books
+Accept: application/json
+
+###
+
+### 2. Ein neues Buch hinzufügen (POST)
+# Hier schicken wir Daten zum Server.
+# Wichtig: Der Content-Type sagt Spring, dass wir JSON senden.
+POST http://localhost:8080/api/books
+Content-Type: application/json
+
+{
+  "title": "Clean Architecture",
+  "author": "Robert C. Martin",
+  "isbn": "978-0134494166",
+  "rating": 5,
+  "status": "Geplant"
+}
+
